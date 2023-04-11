@@ -12,9 +12,6 @@ public class User {
     @GeneratedValue
     private int id;
 
-    @Column(name = "user_name", nullable = false)
-    private String userName;
-
     @Column(name = "email", nullable = false)
     private String email;
 
