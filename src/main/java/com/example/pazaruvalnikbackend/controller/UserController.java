@@ -4,10 +4,11 @@ import com.example.pazaruvalnikbackend.exceptions.UserAlreadyExistException;
 import com.example.pazaruvalnikbackend.model.dto.UserDto;
 import com.example.pazaruvalnikbackend.model.entities.User;
 import com.example.pazaruvalnikbackend.service.UserService;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
 
-import javax.servlet.http.HttpServletRequest;
+
 
 @Controller
 public class UserController {
