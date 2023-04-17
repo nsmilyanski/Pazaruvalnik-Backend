@@ -1,6 +1,5 @@
 package com.example.pazaruvalnikbackend.config;
 
-import com.example.pazaruvalnikbackend.model.entities.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -19,7 +18,7 @@ import java.util.function.Function;
 @Service
 public class JwtService {
     @Value("${application.security.jwt.secret-key}")
-    private static String SECRET_KEY;
+    private  String secretKey;
     @Value("${application.security.jwt.expiration}")
     private long jwtExpiration;
     @Value("${application.security.jwt.refresh-token.expiration}")
@@ -71,7 +70,7 @@ public class JwtService {
     }
 
     private Key getSignInKey() {
-        byte[] keyBytes = Decoders.BASE64.decode(SECRET_KEY);
+        byte[] keyBytes = Decoders.BASE64.decode(secretKey);
         return Keys.hmacShaKeyFor(keyBytes);
     }
 
