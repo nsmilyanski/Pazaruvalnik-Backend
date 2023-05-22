@@ -1,10 +1,13 @@
 package com.example.pazaruvalnikbackend.controller;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/admin")
+@Tag(name = "Management")
 public class ManagementController {
+
 
     @GetMapping
     public String get() {
